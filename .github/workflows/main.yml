@@ -24,11 +24,11 @@ jobs:
           npm install -g newman newman-reporter-htmlextra
 
       - name: Run Postman Collection
-        run: newman run Postman_Collection/GitHub_Action_Assignment_1.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export test-report.html
+        run: newman run Postman_Collection/GitHub_Action_Assignment_1.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export test_report.html
 
       - name: Archive Test Report
         uses: actions/upload-artifact@v3
         with:
-          name: test-report
-          path: test-report.html
+          name: test_report
+          path: test_report.html
           retention-days: 30
