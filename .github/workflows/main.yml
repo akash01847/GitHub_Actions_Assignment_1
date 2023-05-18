@@ -45,7 +45,8 @@ jobs:
           java-version: '11'
 
       - name: Build and run Selenium tests
-        run: mvn clean test -Dheadless=true
+        run: cd Selenium_Project/Broken_Link
+          mvn clean test -Dheadless=true
 
       - name: Archive Selenium test report
         uses: actions/upload-artifact@v2
