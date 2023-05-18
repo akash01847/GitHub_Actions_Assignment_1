@@ -55,5 +55,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Selenium Test Report
-          path: Selenium_Project/Broken_Link/target/surefire-reports
+          path: Selenium_Project/Broken_Link/target/surefire-reports/emailable-report.html
           retention-days: 30
