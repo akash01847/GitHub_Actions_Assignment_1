@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3.2.0
         with:
           node-version: '16'
 
@@ -27,7 +27,7 @@ jobs:
         run: newman run Postman_Collection/GitHub_Action_Assignment_1.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export test_report.html
 
       - name: Archive Postman report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Postman Report
           path: test_report.html
