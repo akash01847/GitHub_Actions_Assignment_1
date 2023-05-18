@@ -42,7 +42,7 @@ public class Base {
                 Log.info("You have initialized a Safari driver");
                 navigate();
             } else if(browser.equalsIgnoreCase("Chrome headless")){
-                System.setProperty("webdriver.chrome.driver", "/home/knoldus/Downloads/driver/chromedriver");
+              
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless");
                 options.addArguments("start-maximized");
