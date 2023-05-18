@@ -31,6 +31,7 @@ jobs:
         with:
           name: Postman Report
           path: test_report.html
+          retention-days: 30
 
   selenium-tests:
     runs-on: ubuntu-latest
@@ -46,11 +47,13 @@ jobs:
           distribution: 'adopt'
 
       - name: Build and run Selenium tests
-        run: cd Selenium_Project/Broken_Link
-          mvn clean test -Dheadless=true
+        run: |
+             cd Selenium_Project/Broken_Link
+             mvn clean test
 
       - name: Archive Selenium test report
         uses: actions/upload-artifact@v2
         with:
           name: Selenium Test Report
           path: target/surefire-reports
+          retention-days: 30
