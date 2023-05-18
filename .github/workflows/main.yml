@@ -1,18 +1,18 @@
-name: Test Postman Collection
+name: GitHub Actions Assignment Two
 
 on:
   push:
     branches:
-      - main
+      - feature/gitHubActionsAssignmentTwo
   workflow_dispatch:
 
 jobs:
-  test:
+  postman-collection:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v3.2.0
@@ -26,9 +26,29 @@ jobs:
       - name: Run Postman Collection
         run: newman run Postman_Collection/GitHub_Action_Assignment_1.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export test_report.html
 
-      - name: Archive Test Report
-        uses: actions/upload-artifact@v3
+      - name: Archive Postman report
+        uses: actions/upload-artifact@v2
         with:
-          name: test_report
+          name: Postman Report
           path: test_report.html
-          retention-days: 30
+
+  selenium-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Build and run Selenium tests
+        run: mvn clean test -Dheadless=true
+
+      - name: Archive Selenium test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Selenium Test Report
+          path: target/surefire-reports
