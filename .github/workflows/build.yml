@@ -36,5 +36,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Gatling Report
-        path: SBT_Project/target/gatling/
+        path: SBT_Project/target/gatling/*/index.html
         retention-days: 30
