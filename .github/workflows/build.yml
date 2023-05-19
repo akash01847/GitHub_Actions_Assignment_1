@@ -30,4 +30,4 @@ jobs:
     - name: Run sbt command
       run: |
            cd SBT_Project/
-           sbt clean compile
+           sbt gatling:test
