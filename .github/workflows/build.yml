@@ -18,11 +18,14 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+         ref: feature/gitHubActionsAssignmentThree
 
     - name: Set up JDK
       uses: actions/setup-java@v2
       with:
         java-version: 11
+        distribution: 'adopt'
 
     - name: Run sbt command
       run: |
