@@ -71,20 +71,20 @@ jobs:
         with:
           ref: feature/gitHubActionsAssignmentThree
 
-    - name: Set up JDK
-      uses: actions/setup-java@v2
-      with:
-        java-version: 11
-        distribution: 'adopt'
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: 11
+          distribution: 'adopt'
 
-    - name: Run sbt command
-      run: |
-        cd SBT_Project/
-        sbt gatling:test
+      - name: Run sbt command
+        run: |
+          cd SBT_Project/
+          sbt gatling:test
 
-    - name: Archive Gatling Report
-      uses: actions/upload-artifact@v2
-      with:
-        name: Gatling Report
-        path: SBT_Project/target/gatling/*/index.html
-        retention-days: 30
+      - name: Archive Gatling Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Gatling Report
+          path: SBT_Project/target/gatling/*/index.html
+          retention-days: 30
