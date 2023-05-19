@@ -5,6 +5,11 @@ on:
     branches:
       - master
       - feature/gitHubActionsAssignmentFour
+  pull_request:
+    branches:
+       - master
+       - feature/gitHubActionsAssignmentFour
+    
     
 
 jobs:
