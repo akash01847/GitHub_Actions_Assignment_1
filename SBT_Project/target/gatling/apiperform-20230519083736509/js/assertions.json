@@ -1,0 +1,45 @@
+{
+  "simulation": "ApiPerform",
+  "simulationId": "apiperform-20230519083736509",
+  "start": 1684485462601,
+  "description": "",
+  "scenarios": ["Chained Scenario"],
+  "assertions": [
+{
+  "path": "Global",
+  "target": "percentage of successful events",
+  "condition": "is greater than",
+  "expectedValues": [95.0],
+  "result": false,
+  "message": "Global: percentage of successful events is greater than 95.0",
+  "actualValue": [62.03582350371342]
+},
+{
+  "path": "POST Request",
+  "target": "max of response time",
+  "condition": "is less than",
+  "expectedValues": [2000.0],
+  "result": false,
+  "message": "POST Request: max of response time is less than 2000.0",
+  "actualValue": [38708.0]
+},
+{
+  "path": "GET Request",
+  "target": "max of response time",
+  "condition": "is less than",
+  "expectedValues": [2000.0],
+  "result": false,
+  "message": "GET Request: max of response time is less than 2000.0",
+  "actualValue": [23085.0]
+},
+{
+  "path": "PUT Request",
+  "target": "max of response time",
+  "condition": "is less than",
+  "expectedValues": [2000.0],
+  "result": false,
+  "message": "PUT Request: max of response time is less than 2000.0",
+  "actualValue": [24961.0]
+}
+  ]
+}

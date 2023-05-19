@@ -1,0 +1,14 @@
+<testsuite name="ApiPerform" tests="4" errors="0" failures="4" time="0">
+<testcase name="Global: percentage of successful events is greater than 95.0" status="false" time="0">
+  <failure type="Global">Actual value: 62.03582350371342</failure>
+</testcase>
+<testcase name="POST Request: max of response time is less than 2000.0" status="false" time="0">
+  <failure type="POST Request">Actual value: 38708.0</failure>
+</testcase>
+<testcase name="GET Request: max of response time is less than 2000.0" status="false" time="0">
+  <failure type="GET Request">Actual value: 23085.0</failure>
+</testcase>
+<testcase name="PUT Request: max of response time is less than 2000.0" status="false" time="0">
+  <failure type="PUT Request">Actual value: 24961.0</failure>
+</testcase>
+</testsuite>

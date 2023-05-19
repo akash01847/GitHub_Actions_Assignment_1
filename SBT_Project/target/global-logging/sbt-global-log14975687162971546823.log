@@ -1,0 +1,15 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(gatling:test, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Gatling / test[0m
+[0m[[0m[33mwarn[0m] [0m[0msbt 0.13 shell syntax is deprecated; use slash syntax instead: Gatling / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /home/knoldus/IdeaProjects/GitHub_Actions_Assignment_3/target/scala-2.13/test-classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m-target is deprecated: Use -release instead to compile against the correct platform API.[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[31merror[0m] [0m[0mSimulation ApiPerform failed.[0m
+[0m[[0m[0minfo[0m] [0m[0mSimulation(s) execution ended.[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	ApiPerform[0m
+[0m[[0m[31merror[0m] [0m[0m(Gatling / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 26 s, completed 19-May-2023, 3:16:37 PM[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

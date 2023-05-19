@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector(-Dsbt.supershell=false, -Djdk.debug=release, -Dswoval.tmpdir=/home/knoldus/.sbt/1.0, -Didea.installation.dir=/snap/intellij-idea-community/434, -Djna.nosys=true, -Dlog4j.ignoreTCL=true, -Djnidispatch.path=/home/knoldus/.cache/JNA/temp/jna1902541672286534382.tmp, -Djna.platform.library.path=/usr/lib/x86_64-linux-gnu:/lib/x86_64-linux-gnu:/usr/lib64:/lib64:/usr/lib:/lib:/lib/i386-linux-gnu:/usr/lib/x86_64-linux-gnu/libfakeroot, -Djna.loaded=true, -Didea.managed=true, -server, -XX:+HeapDumpOnOutOfMemoryError, -XX:MaxInlineLevel=20, -XX:MaxTrivialSize=12, -XX:-UseBiasedLocking, -Xmx1G)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunner for io.gatling.sbt.GatlingFramework produced 1 initial tasks for 1 tests.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(ApiPerform, sbt.ForkMain$SubclassFingerscan@394e1a0f, false, [SuiteSelector])[0m
+[0m[[0m[31merror[0m] [0m[0mSimulation ApiPerform failed.[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0m[0minfo[0m] [0m[0mSimulation(s) execution ended.[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	ApiPerform[0m
+[0m[[0m[31merror[0m] [0m[0m(Gatling / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

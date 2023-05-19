@@ -1,10 +1,8 @@
-Github Actions | Assignment 1:
+Github Actions | Assignment 3:
 
 Tasks to be performed in this assignment:
-1. Create a repository on GitHub with whatever name you may prefer.
-2. Add a dummy postman collection to it.
-3. The main objective would be to create a CI/CD pipeline that will run your postman collection using Newman, via GitHub Actions. If you want, you may use postman CLI if needed, it is up to you.
-4. Once created we need to generate the report as well.
-5. The generated report should be stored as an artifact.
-6. The artifact should get expired after 30 days.
-7. You will need to create a YAML file to configure the pipeline
+   1. This time, you are required to do the same thing that you did in Github Actions assignment 1
+   2. However, instead of a postman collection, you are required to push a project whose build tool is sbt instead of maven.
+   3. The logic of the project is not required, it should be working with “sbt” command, even if it prints “Hello world” only. The only ask is that there should be some output when “sbt clean compile” or some other sbt command is used.
+   4. Once the above steps are done. You need to create a separate job for this and run your project in the pipeline. 
+   5. You may use the same GitHub repo that you used in the earlier assignment. However, create a separate branch for each of the GitHub assignments.
