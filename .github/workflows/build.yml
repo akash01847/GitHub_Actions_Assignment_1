@@ -3,10 +3,12 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
+      - feature/gitHubActionsAssignmentThree
   pull_request:
     branches:
-      - main
+      - master
+      - feature/gitHubActionsAssignmentThree
   
 
 jobs:
