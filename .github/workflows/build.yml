@@ -22,4 +22,6 @@ jobs:
         java-version: 11
 
     - name: Run sbt command
-      run: sbt clean compile
+      run: |
+           cd SBT_Project/
+           sbt clean compile
