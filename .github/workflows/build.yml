@@ -2,7 +2,9 @@ name: Sequential Workflow
 on:
   push:
     branches:
-      - feature/gitHubActionsAssignmentTwo
+      - feature/gitHubActionsAssignmentFour
+  workflow_dispatch:
+    
 
 jobs:
   postman_collection:
