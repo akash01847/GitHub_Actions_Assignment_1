@@ -32,11 +32,6 @@ jobs:
         cd SBT_Project/
         sbt gatling:test
 
-    - name: Generate Gatling Report
-      run: |
-        cd SBT_Project/
-        sbt gatling:lastReport
-
     - name: Archive Gatling Report
       uses: actions/upload-artifact@v2
       with:
