@@ -1,0 +1,90 @@
+name: Sequential Workflow
+on:
+  push:
+    branches:
+      - feature/gitHubActionsAssignmentTwo
+
+jobs:
+  postman_collection:
+    name: Postman Collection Execution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: feature/gitHubActionsAssignmentTwo
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3.2.0
+        with:
+          node-version: '16'
+
+      - name: Install Newman and HTML Reporter
+        run: |
+          npm install -g newman newman-reporter-htmlextra
+
+      - name: Run Postman Collection
+        run: newman run Postman_Collection/GitHub_Action_Assignment_1.postman_collection.json --reporters cli,htmlextra --reporter-htmlextra-export test_report.html
+
+      - name: Archive Postman report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Postman Report
+          path: test_report.html
+          retention-days: 30
+
+  selenium_test:
+    name: Selenium Test Execution
+    needs: postman_collection
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: feature/gitHubActionsAssignmentTwo
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+
+      - name: Build and run Selenium tests
+        run: |
+             cd Selenium_Project/Broken_Link
+             mvn clean test
+
+      - name: Archive Selenium test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: Selenium Test Report
+          path: Selenium_Project/Broken_Link/target/surefire-reports/emailable-report.html
+          retention-days: 30
+
+  sbt_project:
+    name: Sbt Project Execution
+    needs: selenium_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: feature/gitHubActionsAssignmentThree
+
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        java-version: 11
+        distribution: 'adopt'
+
+    - name: Run sbt command
+      run: |
+        cd SBT_Project/
+        sbt gatling:test
+
+    - name: Archive Gatling Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: Gatling Report
+        path: SBT_Project/target/gatling/*/index.html
+        retention-days: 30
