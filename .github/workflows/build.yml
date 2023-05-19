@@ -1,4 +1,5 @@
 name: Test SBT Project
+
 on:
   workflow_dispatch:
   push:
@@ -9,7 +10,6 @@ on:
     branches:
       - master
       - feature/gitHubActionsAssignmentThree
-  
 
 jobs:
   build:
@@ -29,5 +29,17 @@ jobs:
 
     - name: Run sbt command
       run: |
-           cd SBT_Project/
-           sbt gatling:test
+        cd SBT_Project/
+        sbt gatling:test
+
+    - name: Generate Gatling Report
+      run: |
+        cd SBT_Project/
+        sbt gatling:lastReport
+
+    - name: Archive Gatling Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: Gatling Report
+        path: SBT_Project/target/gatling/*/index.html
+        retention-days: 30 
