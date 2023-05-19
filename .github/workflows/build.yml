@@ -36,6 +36,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Gatling Report
-        path: SBT_Project/target/gatling/*/index.html
+        path: SBT_Project/target/gatling/
         retention-days: 30
-        if-no-files-found: error 
