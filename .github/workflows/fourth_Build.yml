@@ -1,7 +1,11 @@
 name: Sequential Workflow
 on:
   push:
+    branches:
+      - feature/gitHubActionsAssignmentFour
   pull_request:
+    branches:
+      - feature/gitHubActionsAssignmentFour
   workflow_dispatch:
     
 jobs:
