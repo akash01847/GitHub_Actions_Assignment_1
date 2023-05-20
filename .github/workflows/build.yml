@@ -1,17 +1,10 @@
 name: Test SBT Project
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - master
-      - feature/gitHubActionsAssignmentTwo
       - feature/gitHubActionsAssignmentThree
-  pull_request:
-    branches:
-      - master
-      - feature/gitHubActionsAssignmentTwo
-      - feature/gitHubActionsAssignmentThree
+  workflow_dispatch:
 
 jobs:
   build:
