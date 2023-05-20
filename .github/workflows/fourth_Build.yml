@@ -60,7 +60,7 @@ jobs:
           retention-days: 30
 
   sbt_project:
-    name: Sbt Project Execution
+    name: Sbt Project Test Execution
     needs: selenium_test
     runs-on: ubuntu-latest
     steps:
