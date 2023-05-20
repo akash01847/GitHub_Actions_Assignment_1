@@ -5,10 +5,12 @@ on:
   push:
     branches:
       - master
+      - feature/gitHubActionsAssignmentTwo
       - feature/gitHubActionsAssignmentThree
   pull_request:
     branches:
       - master
+      - feature/gitHubActionsAssignmentTwo
       - feature/gitHubActionsAssignmentThree
 
 jobs:
