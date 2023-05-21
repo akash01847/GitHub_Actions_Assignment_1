@@ -1,9 +1,6 @@
 name: Test SBT Project
 
 on:
-  push:
-    branches:
-      - feature/gitHubActionsAssignmentThree
   workflow_dispatch:
 
 jobs:
